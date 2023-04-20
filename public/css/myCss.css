@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #151515;
+  transform-style: preserve-3d;
+  perspective: 400px;
+  z-index: 1;
+  transform: scale(0.5) rotateX(-35deg);
+}
+
+.face {
+  background: linear-gradient(#151515, #00ec00);
+  /*border: 2px solid #4fd1c5;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  transform: rotateX(-20deg) rotateY(-10deg);
+  transform-style: preserve-3d;
+  z-index: 0;
+  animation-delay: 5.8s;
+}
+
+.face {
+  /* ... */
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.face--front {
+  transform: translateZ(100px);
+}
+
+.face--right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.face--back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.face--left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.face--top {
+  transform: rotateX(90deg) translateZ(100px);
+  background: #151515;
+}
+
+.face--bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background: #00ec00;
+}
+
+P {
+  content: " ";
+  box-shadow:  0px 0px 120px rgba(0, 255, 0, 0.2),
+  0 0 200px rgba(0, 255, 0, 0.4),
+  0 0 300px rgba(0, 255, 0, 0.6),
+  0 0 400px rgba(0, 255, 0, 0.8),
+  0 0 500px rgba(0, 255, 0, 1);  
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #0f0;
+  transform: rotateX(90deg);
+  filter: blur(20px);
+}
+
+input {
+  display: inline;
+  margin-top: -25em;
+  transform: translateX(9em);
+}
